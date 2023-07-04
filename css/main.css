@@ -350,13 +350,14 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #313131;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    opacity: 1;
   }
   
   .sidenav a {
@@ -389,3 +390,43 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .modal {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #313131;
+    transition: height 0.3s;
+  }
+
+  .modal-content {
+    background-color: #313131;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .container {
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #313131;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
