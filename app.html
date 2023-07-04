@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Boilerplate -->
+    <meta charset="utf-8" />
+    <title>Group G - Application</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- JS -->
+    <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Sidebar Experiement -->
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="http://umamififty.github.io/pbl3">Home</a>
+      <a href="reviews.html">Literature Reviews</a>
+      <a href="weekly.html">Weekly Reports and Updates</a>
+      <a href="https://forms.gle/drBehXPPEEP2CXcW8">Survey!</a>
+      <a href="requirements.html">Requirements</a>
+      <a href="designs.html">Designs and Concepts</a>
+      <a href="diagrams.html">Diagrams</a>
+    </div>
+
+    <div id="main">
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#x2601; Group G - Application</span
+      >
+    </div>
+
+    <!-- Primary Page Layout -->
+        <div class="container">
+            <h1 id = "title">Maps</h1>
+              <div id="map"></div>
+                <input id="pac-input" type="text" placeholder="Search for a place">
+          </div>
+
+        <div class="container">
+          <button id = "openbutton" onclick="openModal()">Open Modal</button>
+        </div>
+        
+          <!-- Bottom sheet modal -->
+          <div class="modal" id="modal">
+            <div class="modal-content">
+              <h2>Modal Content</h2>
+              <p>This is the content of the bottom sheet modal.</p>
+              <button onclick="closeModal()">Close Modal</button>
+            </div>
+          </div>
+
+    <!-- End Document -->
+  </body>
+</html>
