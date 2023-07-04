@@ -51,12 +51,15 @@
 
     <!-- Primary Page Layout -->
         <div class="container">
-            <h1 id = "title">Maps</h1>
-              <div id="map"></div>
+            <h1 id = "title">Geopath</h1>
+            <h6 id = "subtitle">A web application that provides live and useful information about the air pollution in your location.</h6>
+            <h4 id = "AQI">Air Quality Index: 0</h4>
+            <h4 id = "Temperature">Temperature: 0</h4>
+            <div id="map"></div>
                 <input id="pac-input" type="text" placeholder="Search for a place">
-          </div>
+            </div>
         <div class="container">
-          <button class="show-modal">Show bottom sheet</button>
+          <button class="show-modal">More Information</button>
           <!-- Bottom sheet modal -->
           <div class="bottom-sheet">
             <div class="sheet-overlay"></div>
@@ -65,7 +68,52 @@
                 <div class="drag-icon"><span></span></div>
               </div>
               <div class="body">
-                <h2>Bottom Sheet Modal</h2>
+                <h2>More Information</h2>
+
+                <table id="data-table">
+                  <tr>
+                    <th>Pollutants</th>
+                    <th>Max amount today</th>
+                    <th>Min amount today</th>
+                    <th>Column 4</th>
+                  </tr>
+                  <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                    <td>Row 1, Cell 4</td>
+                  </tr>
+                  <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                    <td>Row 2, Cell 4</td>
+                  </tr>
+                  <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                    <td>Row 3, Cell 4</td>
+                  </tr>
+                  <tr>
+                    <td>Row 4, Cell 1</td>
+                    <td>Row 4, Cell 2</td>
+                    <td>Row 4, Cell 3</td>
+                    <td>Row 4, Cell 4</td>
+                  </tr>
+                  <tr>
+                    <td>Row 5, Cell 1</td>
+                    <td>Row 5, Cell 2</td>
+                    <td>Row 5, Cell 3</td>
+                    <td>Row 5, Cell 4</td>
+                  </tr>
+                  <tr>
+                    <td>Row 6, Cell 1</td>
+                    <td>Row 6, Cell 2</td>
+                    <td>Row 6, Cell 3</td>
+                    <td>Row 6, Cell 4</td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
