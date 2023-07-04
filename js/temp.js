@@ -1,15 +1,3 @@
-function openNav() {
-  document.getElementById("mySidenav").style.width = "15%";
-  document.getElementById("main").style.marginLeft = "15%";
-  document.body.style.backgroundColor = "#313131";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "#313131";
-}
-
 // Select DOM elements
 const showModalBtn = document.querySelector(".show-modal");
 const bottomSheet = document.querySelector(".bottom-sheet");

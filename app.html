@@ -25,16 +25,14 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
     <!-- JS -->
-    <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
+
   </head>
   <body>
     <!-- Sidebar Experiement -->
 
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="http://umamififty.github.io/pbl3">Home</a>
       <a href="reviews.html">Literature Reviews</a>
       <a href="weekly.html">Weekly Reports and Updates</a>
@@ -42,6 +40,7 @@
       <a href="requirements.html">Requirements</a>
       <a href="designs.html">Designs and Concepts</a>
       <a href="diagrams.html">Diagrams</a>
+      <a href="app.html">Application</a>
     </div>
 
     <div id="main">
@@ -56,19 +55,23 @@
               <div id="map"></div>
                 <input id="pac-input" type="text" placeholder="Search for a place">
           </div>
-
         <div class="container">
-          <button id = "openbutton" onclick="openModal()">Open Modal</button>
-        </div>
-        
+          <button class="show-modal">Show bottom sheet</button>
           <!-- Bottom sheet modal -->
-          <div class="modal" id="modal">
-            <div class="modal-content">
-              <h2>Modal Content</h2>
-              <p>This is the content of the bottom sheet modal.</p>
-              <button onclick="closeModal()">Close Modal</button>
+          <div class="bottom-sheet">
+            <div class="sheet-overlay"></div>
+            <div class="content">
+              <div class="header">
+                <div class="drag-icon"><span></span></div>
+              </div>
+              <div class="body">
+                <h2>Bottom Sheet Modal</h2>
+              </div>
             </div>
           </div>
+        </div>
+
+ 
 
     <!-- End Document -->
   </body>
