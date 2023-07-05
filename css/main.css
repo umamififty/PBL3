@@ -407,6 +407,10 @@
     position: relative;
   }
 
+  .show-modal{
+    margin-top: 15px;
+  }
+
   /* Bottom Sheet */
 
   .bottom-sheet {
