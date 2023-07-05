@@ -494,6 +494,45 @@
     font-size: 1.05rem;
   }
 
+
+  #map-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(2 / 3 * 100%);
+    height: calc(1 / 2 * 100%);
+    min-width: 300px;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  #pre-existing-illnesses {
+    position: relative;
+    width: calc(1/10 * 100%);
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+  }
+
+  #route-info {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+    width: calc(1/10 * 100%);
+  }
+
  #data-table{
     width: 80%;
     border-collapse: collapse;
