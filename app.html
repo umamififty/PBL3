@@ -27,13 +27,14 @@
     <!-- JS -->
     <script src="js/app.js"></script>
     <script defer src="js/main.js"></script>
-
   </head>
   <body>
     <!-- Sidebar Experiement -->
 
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
       <a href="http://umamififty.github.io/pbl3">Home</a>
       <a href="reviews.html">Literature Reviews</a>
       <a href="weekly.html">Weekly Reports and Updates</a>
@@ -43,82 +44,112 @@
       <a href="diagrams.html">Diagrams</a>
       <a href="app.html">Application</a>
     </div>
-    
+
     <div id="main">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#x2630; Geopath Team - App</span>
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#x2630; Geopath Team - App</span
+      >
     </div>
 
     <!-- Primary Page Layout -->
-        <div class="container">
-            <h1 id = "title">Geopath</h1>
-            <h6 id = "subtitle">A web application that provides live and useful information about the air pollution in your location.</h6>
-            <h4 id = "AQI">Air Quality Index: 0</h4>
-            <h4 id = "Temperature">Temperature: 0</h4>
-            <input id="pac-input" type="text" placeholder="Search for a place">
-            <div id="map"></div>
-            </div>
-        <div class="container">
-          <button class="show-modal">More Information</button>
-          <!-- Bottom sheet modal -->
-          <div class="bottom-sheet">
-            <div class="sheet-overlay"></div>
-            <div class="content">
-              <div class="header">
-                <div class="drag-icon"><span></span></div>
-              </div>
-              <div class="body">
-                <h2>More Information</h2>
+    <div class="container">
+      <h1 id="title">Geopath</h1>
+      <h6 id="subtitle">
+        A web application that provides live and useful information about the
+        air pollution in your location.
+      </h6>
+      <!-- <h4 id="AQI">Air Quality Index: 0</h4>
+      <h4 id="Temperature">Temperature: 0</h4> -->
+    </div>
+    <div class="container">
+      <div id="route-info"></div>
+      <!-- Top left distance duration value -->
+      <div id="air-info"></div>
+      <!-- Top left air quality  value-->
+      <div id="temp-div"></div>
+      <!-- Top left temprature value-->
+      <div id="pre-existing-illnesses">
+        <!-- Top left 3rd drop down menu options -->
+        <label for="illnesses-dropdown">Pre-existing Illnesses:</label>
+        <select id="illnesses-dropdown" onchange="onIllnessChange()">
+          <option value="None">None</option>
+          <option value="Diabetes-II">Diabetes-II</option>
+          <option value="Cardiovascular disease">Cardiovascular disease</option>
+          <option value="Respiratory disease">Respiratory disease</option>
+        </select>
+      </div>
+    </div>
+    <div class="container">
+      <input id="pac-input" type="text" placeholder="Search for a place" />
+      <div id="map"></div>
+    </div>
 
-                <!-- <div id="us-aqi-plot"></div>  -->
+    <div class = "container">
+      <div id="us-aqi-plot"></div>
+    </div>
 
-                <table id="data-table">
-                  <tr>
-                    <th>Pollutants</th>
-                    <th>Max amount today</th>
-                    <th>Min amount today</th>
-                    <th>Column 4</th>
-                  </tr>
-                  <tr>
-                    <td>Row 1, Cell 1</td>
-                    <td>Row 1, Cell 2</td>
-                    <td>Row 1, Cell 3</td>
-                    <td>Row 1, Cell 4</td>
-                  </tr>
-                  <tr>
-                    <td>Row 2, Cell 1</td>
-                    <td>Row 2, Cell 2</td>
-                    <td>Row 2, Cell 3</td>
-                    <td>Row 2, Cell 4</td>
-                  </tr>
-                  <tr>
-                    <td>Row 3, Cell 1</td>
-                    <td>Row 3, Cell 2</td>
-                    <td>Row 3, Cell 3</td>
-                    <td>Row 3, Cell 4</td>
-                  </tr>
-                  <tr>
-                    <td>Row 4, Cell 1</td>
-                    <td>Row 4, Cell 2</td>
-                    <td>Row 4, Cell 3</td>
-                    <td>Row 4, Cell 4</td>
-                  </tr>
-                  <tr>
-                    <td>Row 5, Cell 1</td>
-                    <td>Row 5, Cell 2</td>
-                    <td>Row 5, Cell 3</td>
-                    <td>Row 5, Cell 4</td>
-                  </tr>
-                  <tr>
-                    <td>Row 6, Cell 1</td>
-                    <td>Row 6, Cell 2</td>
-                    <td>Row 6, Cell 3</td>
-                    <td>Row 6, Cell 4</td>
-                  </tr>
-                </table>
-              </div>
+    <div class="container">
+      <button class="show-modal">More Information</button>
+      <!-- Bottom sheet modal -->
+      <div class="bottom-sheet">
+        <div class="sheet-overlay"></div>
+        <div class="content">
+          <div class="header">
+            <div class="drag-icon"><span></span></div>
+          </div>
+          <div class="body">
+            <h2>More Information</h2>
+            
+            <div class = "container">
+              <table id="data-table">
+                <tr>
+                  <th>Pollutants</th>
+                  <th>Max amount today</th>
+                  <th>Min amount today</th>
+                  <th>Column 4</th>
+                </tr>
+                <tr>
+                  <td>Row 1, Cell 1</td>
+                  <td>Row 1, Cell 2</td>
+                  <td>Row 1, Cell 3</td>
+                  <td>Row 1, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 2, Cell 1</td>
+                  <td>Row 2, Cell 2</td>
+                  <td>Row 2, Cell 3</td>
+                  <td>Row 2, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 3, Cell 1</td>
+                  <td>Row 3, Cell 2</td>
+                  <td>Row 3, Cell 3</td>
+                  <td>Row 3, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 4, Cell 1</td>
+                  <td>Row 4, Cell 2</td>
+                  <td>Row 4, Cell 3</td>
+                  <td>Row 4, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 5, Cell 1</td>
+                  <td>Row 5, Cell 2</td>
+                  <td>Row 5, Cell 3</td>
+                  <td>Row 5, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 6, Cell 1</td>
+                  <td>Row 6, Cell 2</td>
+                  <td>Row 6, Cell 3</td>
+                  <td>Row 6, Cell 4</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
     <!-- End Document -->
   </body>

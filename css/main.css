@@ -1,18 +1,8 @@
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-
  html {
     font-family: sans-serif; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
-  
-  /**
-   * Remove default margin.
-   */
   
   body {
     margin: 0;
@@ -43,20 +33,12 @@
     vertical-align: baseline; /* 2 */
   }
   
-  /**
-   * Prevent modern browsers from displaying `audio` without controls.
-   * Remove excess height in iOS 5 devices.
-   */
+  
   
   audio:not([controls]) {
     display: none;
     height: 0;
   }
-  
-  /**
-   * Address `[hidden]` styling not present in IE 8/9/10.
-   * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
-   */
   
   [hidden],
   template {
@@ -516,10 +498,8 @@
 
   #pre-existing-illnesses {
     position: relative;
-    width: calc(1/10 * 100%);
     top: 10px;
-    left: 10px;
-    background-color: #fff;
+    background-color: #313131;
     padding: 10px;
     border-radius: 5px;
     z-index: 1;
@@ -529,13 +509,17 @@
   #route-info {
     position: relative;
     top: 5px;
-    left: 5px;
-    background-color: #fff;
+    /* left: 5px; */
+    background-color: #313131;
     padding: 5px;
     border-radius: 5px;
     z-index: 1;
     min-width: 200px;
-    width: calc(1/10 * 100%);
+    /* width: calc(1/10 * 100%); */
+  }
+
+  #info-window{
+    color: airQualityColorClass;
   }
 
  #data-table{

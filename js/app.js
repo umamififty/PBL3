@@ -47,8 +47,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
       usAqiDiv.innerHTML = `<h4> Air Quality Index: ${usAqiData[elapsedHours]}</h4>`;
 
       const plotGraphDiv1 = document.getElementById("us-aqi-plot");
-      const plotData1 = [{ x: timeData, y: usAqiData, name: "AQI" }];
-      const layout1 = { title: "Air Quality Data" };
+        const plotData1 = [{ x: timeData, y: usAqiData, name: "AQI" }];
+        const layout1 = { title: "Air Quality Data" };
       Plotly.newPlot(plotGraphDiv1, plotData1, layout1);
 
       const pointData = [
@@ -74,7 +74,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
       const tempdDiv = document.getElementById("temp-div");
 
-      tempdDiv.innerHTML = `<p> temprature: ${tempData[elapsedHours]}</p>`;
+      tempdDiv.innerHTML = `<p> Temperature: ${tempData[elapsedHours]}</p>`;
     })
     .catch((error) => {
       console.error("Error:", error);
