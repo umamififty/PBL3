@@ -18,6 +18,7 @@
     />
 
     <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/app.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
 
@@ -27,6 +28,7 @@
     <!-- JS -->
     <script src="js/app.js"></script>
     <script defer src="js/main.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
   <body>
     <!-- Sidebar Experiement -->
@@ -84,10 +86,6 @@
       <div id="map"></div>
     </div>
 
-    <!-- <div class = "container">
-      <div id="us-aqi-plot"></div>
-    </div> -->
-
     <div class="container">
       <button class="show-modal">More Information</button>
       <!-- Bottom sheet modal -->
@@ -99,23 +97,23 @@
           </div>
           <div class="body">
             <h2>More Information</h2>
-            
-            <div class = "container">
+
+            <div class="container">
               <table id="data-table">
                 <tr>
                   <th>Pollutants</th>
-                  <th>Max amount today</th>
-                  <th>Min amount today</th>
+                  <th>Today</th>
+                  <th>Next 7 Days</th>
                   <th>Column 4</th>
                 </tr>
                 <tr>
-                  <td>Row 1, Cell 1</td>
+                  <td>Destination - Worst AQ</td>
                   <td>Row 1, Cell 2</td>
                   <td>Row 1, Cell 3</td>
                   <td>Row 1, Cell 4</td>
                 </tr>
                 <tr>
-                  <td>Row 2, Cell 1</td>
+                  <td>Destination - Best AQ</td>
                   <td>Row 2, Cell 2</td>
                   <td>Row 2, Cell 3</td>
                   <td>Row 2, Cell 4</td>
@@ -145,6 +143,16 @@
                   <td>Row 6, Cell 4</td>
                 </tr>
               </table>
+              <div id="graph-type">
+                <label for="graph-dropdown">Graph types:</label>
+                <select id="graph-dropdown" onchange="onGraphChange()">
+                  <option value="AQI">AQI</option>
+                  <option value="Components">Components</option>
+                </select>
+              </div>
+              <div class = "container">
+                <div id="us-aqi-plot"></div>
+              </div>
             </div>
           </div>
         </div>

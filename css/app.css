@@ -1,0 +1,154 @@
+#table-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #data-table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: 0;
+  width: calc(2 / 3 * 100%);
+  height: calc(1  * 100%);
+  table-layout: fixed; /* Added fixed table layout */
+}
+
+#data-table td, #data-table th {
+  border: 1px solid black;
+  padding: 8px;
+  width: auto; /* Changed width to auto */
+  word-break: break-word; /* Added word break */
+}
+
+#data-table th {
+  background-color: #f2f2f2;
+}
+  #map-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(2 / 3 * 100%);
+    height: calc(1 / 2 * 100%);
+    min-width: 300px;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  #pre-existing-illnesses {
+    position: relative;
+    width: calc(1/10 * 100%);
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+  }
+  #graph-type {
+    position: relative;
+    width: calc(1/10 * 100%);
+    top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+  }
+
+  #route-info {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+    width: calc(1/10 * 100%);
+    
+  }
+  #air-info {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+    width: calc(1/10 * 100%);
+    text-align: center;
+  }
+  #temp-div {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: #fff;
+    padding: 5px;
+    z-index: 1;
+    min-width: 200px;
+    width: calc(1/10 * 100%);
+    text-align: center;
+  }
+  #us-aqi-plot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+    min-width: 200px;
+    width: calc(1/3 * 100%);
+    height: calc(1/2 * 100%);
+  }
+
+  #pac-input {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .info-window {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .green {
+    background-color: green;
+    color: white;
+  }
+
+  .yellow {
+    background-color: yellow;
+    color: black;
+  }
+
+  .orange {
+    background-color: orange;
+    color: white;
+  }
+
+  .red {
+    background-color: red;
+    color: white;
+  }
+
+  .purple {
+    background-color: purple;
+    color: white;
+  }
+
+  .brown {
+    background-color: maroon;
+    color: white;
+  }
