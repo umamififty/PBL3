@@ -1,19 +1,20 @@
 #table-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
-  #data-table {
+#data-table {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: 0;
   width: calc(2 / 3 * 100%);
-  height: calc(1  * 100%);
+  height: calc(1 * 100%);
   table-layout: fixed; /* Added fixed table layout */
 }
 
-#data-table td, #data-table th {
+#data-table td,
+#data-table th {
   border: 1px solid black;
   padding: 8px;
   width: auto; /* Changed width to auto */
@@ -23,132 +24,169 @@
 #data-table th {
   background-color: #f2f2f2;
 }
-  #map-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: calc(2 / 3 * 100%);
-    height: calc(1 / 2 * 100%);
-    min-width: 300px;
-  }
+#map-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(2 / 3 * 100%);
+  height: calc(1 / 2 * 100%);
+  min-width: 300px;
+}
 
-  #map {
-    height: 100%;
-    width: 100%;
-  }
+#map {
+  height: 100%;
+  width: 100%;
+}
 
-  #pre-existing-illnesses {
-    position: relative;
-    width: calc(1/10 * 100%);
-    top: 10px;
-    left: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1;
-    min-width: 200px;
-  }
-  #graph-type {
-    position: relative;
-    width: calc(1/10 * 100%);
-    top: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1;
-    min-width: 200px;
-  }
+#pre-existing-illnesses {
+  position: relative;
+  width: calc(1 / 10 * 100%);
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 200px;
+}
+#graph-type {
+  position: relative;
+  width: calc(1 / 10 * 100%);
+  top: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 200px;
+}
 
-  #route-info {
-    position: relative;
-    top: 5px;
-    left: 5px;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    z-index: 1;
-    min-width: 200px;
-    width: calc(1/10 * 100%);
-    
-  }
-  #air-info {
-    position: relative;
-    top: 5px;
-    left: 5px;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    z-index: 1;
-    min-width: 200px;
-    width: calc(1/10 * 100%);
-    text-align: center;
-  }
-  #temp-div {
-    position: relative;
-    top: 5px;
-    left: 5px;
-    background-color: #fff;
-    padding: 5px;
-    z-index: 1;
-    min-width: 200px;
-    width: calc(1/10 * 100%);
-    text-align: center;
-  }
-  #us-aqi-plot {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 1;
-    min-width: 200px;
-    width: calc(1/3 * 100%);
-    height: calc(1/2 * 100%);
-  }
+#route-info {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 200px;
+  width: calc(1 / 10 * 100%);
+}
+#air-info {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 200px;
+  width: calc(1 / 10 * 100%);
+  text-align: center;
+}
+#temp-div {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  background-color: #fff;
+  padding: 5px;
+  z-index: 1;
+  min-width: 200px;
+  width: calc(1 / 10 * 100%);
+  text-align: center;
+}
+#us-aqi-plot {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 0;
+  min-width: 200px;
+  width: calc(1 / 3 * 100%);
+  height: calc(1 / 2 * 100%);
+}
 
-  #pac-input {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  }
+#pac-input {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 
-  .info-window {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px;
-  }
+.info-window {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+}
 
-  .green {
-    background-color: green;
-    color: white;
-  }
+.green {
+  background-color: green;
+  color: white;
+}
 
-  .yellow {
-    background-color: yellow;
-    color: black;
-  }
+.yellow {
+  background-color: yellow;
+  color: black;
+}
 
-  .orange {
-    background-color: orange;
-    color: white;
-  }
+.orange {
+  background-color: orange;
+  color: white;
+}
 
-  .red {
-    background-color: red;
-    color: white;
-  }
+.red {
+  background-color: red;
+  color: white;
+}
 
-  .purple {
-    background-color: purple;
-    color: white;
-  }
+.purple {
+  background-color: purple;
+  color: white;
+}
 
-  .brown {
-    background-color: maroon;
-    color: white;
-  }
+.brown {
+  background-color: maroon;
+  color: white;
+}
+
+/* Add CSS to create the side-by-side layout */
+.container_modal {
+  display: flex;
+}
+
+.data-wrapper {
+  flex: 1;
+  padding-right: 20px; /* Optional spacing between the table and chart */
+}
+
+.chart-wrapper {
+  flex: 1;
+}
+
+#data-tablex{
+  width: 80%;
+  border-collapse: collapse;
+  border: 1px solid rgb(221, 221, 221);
+  height: calc(1 * 100%);
+  table-layout: fixed;
+  border: #ffffff;
+  margin: 10%;
+  text-align: center;
+
+}
+
+float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border: 2px solid red;
+}  

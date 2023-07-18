@@ -386,6 +386,77 @@ function initMap() {
       position: currentPos,
       map: map,
       title: "Current Position",
+    });  searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
+
+    // Bias the search box results towards the current map's viewport
+    map.addListener('bounds_changed', function() {
+      searchBox.setBounds(map.getBounds());
+    });
+
+    // Perform search and update the map based on the selected place
+    searchBox.addListener('places_changed', function() {
+      var places = searchBox.getPlaces();
+      
+  
+      if (places.length === 0) {
+        return;
+      }
+
+      // Clear any existing destination marker and route
+      if (destinationMarker) {
+        destinationMarker.setMap(null);
+      }
+
+      if (directionsRenderer) {
+        directionsRenderer.setMap(null);
+      }
+
+      // Get the first place from the search results
+      var place = places[0];
+
+      // Set the new destination marker
+      destinationMarker = new google.maps.Marker({
+        position: place.geometry.location,
+        map: map,
+        title: place.name,
+        center: place.geometry.location,
+        zoom: 14
+      });
+      fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${place.geometry.location.lat()}&longitude=${place.geometry.location.lng()}&hourly=us_aqi`)
+        .then(response => response.json())
+        .then(jsonResponse => {
+            console.log(jsonResponse)
+        // Extracting the relevant data from the JSON
+        const usAqiData = jsonResponse.hourly.us_aqi;
+        const timeData = [];
+            for (let i = 0; i <= 24; i++) {
+            timeData.push(jsonResponse.hourly.time[i]);
+            }
+            
+          const airQualityIndex = usAqiData[elapsedHours];
+          
+          const airQualityText = getAirQualityText(airQualityIndex, onIllnessChange());
+          const airQualityColorClass = getAirQualityColorClass(airQualityIndex, onIllnessChange());
+          
+          const contentString = `
+            <div class="info-window ${airQualityColorClass}">
+              <p><b>Air Quality Index:</b> <span id="air-index">${airQualityIndex}</span></p>
+              <p><span id="air-text">${airQualityText}</span></p>
+            </div>
+          `;
+
+          const infowindow = new google.maps.InfoWindow({
+            content: contentString,
+          });
+           // Initialize the search box
+  
+          infowindow.open(map, destinationMarker);
+          console.log(usAqiData+"I am index");
+
+        });
+
+      // Calculate and display the route
+      calculateAndDisplayRoute(currentPos, place.geometry.location);
     });
 
     google.maps.event.addListener(map, "click", function (event) {
@@ -575,51 +646,7 @@ function initMap() {
       calculateAndDisplayRoute(currentPos, clickedPos);
     });
 
-    // Initialize the search box
-    searchBox = new google.maps.places.SearchBox(
-      document.getElementById("pac-input")
-    );
-
-    // Bias the search box results towards the current map's viewport
-    map.addListener("bounds_changed", function () {
-      searchBox.setBounds(map.getBounds());
-    });
-
-    // Perform search and update the map based on the selected place
-    searchBox.addListener("places_changed", function () {
-      var places = searchBox.getPlaces();
-
-      if (places.length === 0) {
-        return;
-      }
-
-      // Clear any existing destination marker and route
-      if (destinationMarker) {
-        destinationMarker.setMap(null);
-      }
-
-      if (directionsRenderer) {
-        directionsRenderer.setMap(null);
-      }
-
-      // Get the first place from the search results
-      var place = places[0];
-
-      // Set the new destination marker
-      destinationMarker = new google.maps.Marker({
-        position: place.geometry.location,
-        map: map,
-        title: place.name,
-        center: destinationMarker,
-      });
-
-      // Generate random Air Quality Index
-
-      infowindow.open(map, destinationMarker);
-
-      // Calculate and display the route
-      calculateAndDisplayRoute(currentPos, place.geometry.location);
-    });
+   
     var tileLayer = new google.maps.ImageMapType({
       getTileUrl: function (coord, zoom) {
         var url =

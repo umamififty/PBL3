@@ -97,62 +97,78 @@
           </div>
           <div class="body">
             <h2>More Information</h2>
-
-            <div class="container">
-              <table id="data-table">
+            <div class="float-container">
+              <div class = "float-child">
+                <table id="data-table">
+                  <tr>
+                    <th> - </th>
+                    <th>Today</th>
+                    <th>Next 7 Days</th>
+                  </tr>
+                  <tr>
+                    <td>Destination - Worst AQ</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                  </tr>
+                  <tr>
+                    <td>Destination - Best AQ</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                  </tr>
+                  </tr>
+                </table>
+              </div>  
+          </div>
+          <div class="container">
+            <div id="graph-type">
+              <label for="graph-dropdown">Graph types:</label>
+              <select id="graph-dropdown" onchange="onGraphChange()">
+                <option value="AQI">AQI</option>
+                <option value="Components">Components</option>
+              </select>
+            </div>
+            <div class = "container">
+              <div id="us-aqi-plot"></div>
+            </div>
+          </div> 
+            <div class="container" style="margin-top: 450px;">
+              <table id = "data-tablex" style = "margin-top: 10%">
                 <tr>
-                  <th>Pollutants</th>
-                  <th>Today</th>
-                  <th>Next 7 Days</th>
-                  <th>Column 4</th>
+                  <th>Category and Colour</th>
+                  <th>Range</th>
+                  <th>Health Implications</th>
                 </tr>
-                <tr>
-                  <td>Destination - Worst AQ</td>
-                  <td>Row 1, Cell 2</td>
-                  <td>Row 1, Cell 3</td>
-                  <td>Row 1, Cell 4</td>
+                <tr style = "background-color: green;">
+                  <td>Good</td>
+                  <td>0 - 50</td>
+                  <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
                 </tr>
-                <tr>
-                  <td>Destination - Best AQ</td>
-                  <td>Row 2, Cell 2</td>
-                  <td>Row 2, Cell 3</td>
-                  <td>Row 2, Cell 4</td>
+                <tr style = "background-color: yellow; color: black;">
+                  <td>Moderate</td>
+                  <td>51 - 100</td>
+                  <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
                 </tr>
-                <tr>
-                  <td>Row 3, Cell 1</td>
-                  <td>Row 3, Cell 2</td>
-                  <td>Row 3, Cell 3</td>
-                  <td>Row 3, Cell 4</td>
+                <tr style="background-color: orange; color: black;">
+                  <td>Unhealthy for Sensitive Groups</td>
+                  <td>101 - 150</td>
+                  <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
                 </tr>
-                <tr>
-                  <td>Row 4, Cell 1</td>
-                  <td>Row 4, Cell 2</td>
-                  <td>Row 4, Cell 3</td>
-                  <td>Row 4, Cell 4</td>
+                <tr style="background-color: red; color: black;">
+                  <td>Unhealthy</td>
+                  <td>151 - 200</td>
+                  <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</td>
                 </tr>
-                <tr>
-                  <td>Row 5, Cell 1</td>
-                  <td>Row 5, Cell 2</td>
-                  <td>Row 5, Cell 3</td>
-                  <td>Row 5, Cell 4</td>
+                <tr style="background-color: purple; color: black;">
+                  <td>Very Unhealthy</td>
+                  <td>201 - 300</td>
+                  <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
                 </tr>
-                <tr>
-                  <td>Row 6, Cell 1</td>
-                  <td>Row 6, Cell 2</td>
-                  <td>Row 6, Cell 3</td>
-                  <td>Row 6, Cell 4</td>
+                <tr style="background-color: maroon; color: white;">
+                  <td>Hazardous</td>
+                  <td>301 - 500</td>
+                  <td>Health alert: everyone may experience more serious health effects.</td>
                 </tr>
               </table>
-              <div id="graph-type">
-                <label for="graph-dropdown">Graph types:</label>
-                <select id="graph-dropdown" onchange="onGraphChange()">
-                  <option value="AQI">AQI</option>
-                  <option value="Components">Components</option>
-                </select>
-              </div>
-              <div class = "container">
-                <div id="us-aqi-plot"></div>
-              </div>
             </div>
           </div>
         </div>
