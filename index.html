@@ -24,6 +24,7 @@
   <!-- JS -->
   <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </head>
 <body>
 
@@ -32,47 +33,51 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="http://umamififty.github.io/pbl3">Home</a>
-    <a href="reviews.html">Literature Reviews</a>
-    <a href="weekly.html">Weekly Reports and Updates</a>
-    <a href="https://forms.gle/drBehXPPEEP2CXcW8">Survey!</a>
-    <a href="requirements.html">Requirements</a>
-    <a href="designs.html">Designs and Concepts</a>
-    <a href="diagrams.html">Diagrams</a>
-    <a href="app.html">Application</a>
+    <a href="reviews.html">Food Trucks!</a>
+    <a href="weekly.html">BKC Food Street!</a>
+    <a href="#"></a>
+    <a href="requirements.html">Study Guide</a>
+    <a href="designs.html">Study Assistance</a>
+    <a href="diagrams.html">Filler here!</a>
   </div>
   
   <div id="main">
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#x2630; Geopath Team</span>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#x2630; PBL4</span>
   </div>
 
   <!-- Primary Page Layout -->
   <div class="container">
     <div class="row">
       <div class="three column" style="margin-top: 10%">
-        <h4>Project Description</h4>
-        <p>The application that we are creating aims to provide live and useful information about the air pollution in their location.</p>
-
-        <h4>Group Members</h4>
-        <ul>
-            <li>Li Muting (Allen) - Project Manager</li>
-            <li>Daiki Ito - Communications Officer</li>
-            <li>Miao Ruolin - Literature Reviewer</li>
-            <li>Biligsaikhan - Senior Coder</li>
-            <li>Khoo Zhenyu - Junior Coder</li>
-        </ul>
-
-        <h4>Target Market</h4>
-        <p>Our target market is the general public, especially those who are concerned about the air pollution in their location.</p>
-
-        <h4>Product Features</h4>
-        <ul>
-            <li>Frequently updated air quality information</li>
-            <li>Information about the health effects of air pollution</li>
-            <li>Route planning based on air quality in regions</li>
-        <p></p>
+        <h2 style="text-align: left;">Audible</h2>
+        <p style="text-align: left;">
+          キッチンカー audible 🚚³₃
+              <br>
+              🍗‪CHICKEN Over Rise専門店🍚
+              <br>
+              アメリカンフットボール🏈🏈🏈
+              <br>
+              スポーツ試合会場に出店しております٩( ᐛ ) و
+              <br>
+              オフィスビル🏙大学🏢などの出店依頼お待ちしております💪🏽🤩🔥
+              <br><a href="https://www.instagram.com/kitchen_audible_2022/">Follow us on Instagram</a>
+        </p>
       </div>
     </div>
   </div>
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:91%">
+    <div id="imgtext"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <img src="images/image1_small.jpg" alt="" onclick="myFunction(this);">
+      <img src="images/image2_small.jpg" alt="" onclick="myFunction(this);">
+      <img src="images/image3_small.jpg" alt="" onclick="myFunction(this);">
+    </div>
+  </div>
+</div>
 <!-- End Document -->
 </body>
 </html>
